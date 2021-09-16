@@ -28,10 +28,10 @@ var accesoryCard = document.getElementById('acessory-grids');
   http.onreadystatechange = function() {
       if(this.readyState == 4) {
           var productList = JSON.parse(this.responseText);
-          var productListId = productList[0].id;
         function carding(i) {
             if(productList[i].isAccessory == false) {
-            mainCard.innerHTML += `<div onclick="renderCard(${productList[i].id})" id="${productList[i].id}" class="clothing-cards">
+            mainCard.innerHTML += `<div id="${productList[i].id}" class="clothing-cards">
+            <a class="card-link" href ="./Html/details.html?p=${productList[i].id}" >
             <div class="image-container">
                 <img src="${productList[i].preview}" alt="" class="product-image">
             </div>
@@ -40,20 +40,22 @@ var accesoryCard = document.getElementById('acessory-grids');
                 <p class="product-brand">${productList[i].brand}</p>
                 <p class="product-price">Rs. ${productList[i].price}</p>
             </div>
+            </a>
         </div>`
-        console.log(mainCard);
             } else {
                 if (productList[i].isAccessory != false) {
-                    accesoryCard.innerHTML += `<div onclick="renderCard(${productList[i].id})" id="${productList[i].id}" class="clothing-cards">
-                    <div class="image-container">
-                        <img src="${productList[i].preview}" alt="" class="product-image">
-                    </div>
-                    <div class="card-content">
-                        <h1 class="product-name">${productList[i].name}</h1>
-                        <p class="product-brand">${productList[i].brand}</p>
-                        <p class="product-price">Rs. ${productList[i].price}</p>
-                    </div>
-                </div>`
+                    accesoryCard.innerHTML += `<div id="${productList[i].id}" class="clothing-cards">
+            <a class="card-link" href ="./Html/details.html?p=${productList[i].id}" >
+            <div class="image-container">
+                <img src="${productList[i].preview}" alt="" class="product-image">
+            </div>
+            <div class="card-content">
+                <h1 class="product-name">${productList[i].name}</h1>
+                <p class="product-brand">${productList[i].brand}</p>
+                <p class="product-price">Rs. ${productList[i].price}</p>
+            </div>
+            </a>
+        </div>`
                 }
             }
             
@@ -67,10 +69,5 @@ var accesoryCard = document.getElementById('acessory-grids');
   }
   
 http.send();
-mainCard.addEventListener('click', function() {
-    window.open('./Html/details.html',"_self");
-})
-accesoryCard.addEventListener('click', function() {
-    window.open('./Html/details.html',"_self")
-})
+
 
