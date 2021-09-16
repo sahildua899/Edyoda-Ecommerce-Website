@@ -1,7 +1,7 @@
 var cartCount = document.getElementById('cart-count');
 var cardCount = window.localStorage.getItem('Cart');
-cartCount = JSON.parse(cardCount);
-console.log(cardCount)
+cartCount = JSON.stringify(cardCount);
+console.log(cardCount);
 
 // var totalCount = 0;
 //     for(var i=0; i<cardCount.length; i++) {
