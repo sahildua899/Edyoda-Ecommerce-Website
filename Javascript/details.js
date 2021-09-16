@@ -1,15 +1,13 @@
-var productId = window.location.search.split('=')[1];
-console.log(productId);    
+$(document).ready(function() {
+
+var productId = window.location.search.split('=')[1];  
+
     
-    
-    
-    var cartCount = document.getElementById('cart-count');
-    cardCount = window.localStorage.getItem('Cart');
-    cartCount.innerHTML = JSON.parse(cardCount);
     
 
 
 var projectContainer = document.getElementById('project-container');
+
 
 
 
@@ -18,6 +16,7 @@ detailsproduct.open('GET', `https://5d76bf96515d1a0014085cf9.mockapi.io/product/
 detailsproduct.onreadystatechange = function() {
     if(this.readyState == 4) {
         var productData = JSON.parse(this.responseText);
+        console.log(productData);
         projectContainer.innerHTML = `<div class="project-wrapper">
         <div class="image-section">
             <img src="${productData.preview}" alt="" class="main-image">
@@ -82,6 +81,4 @@ detailsproduct.onreadystatechange = function() {
 }
 
 detailsproduct.send();
-
-
-
+});
