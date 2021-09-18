@@ -16,7 +16,7 @@ detailsproduct.open('GET', `https://5d76bf96515d1a0014085cf9.mockapi.io/product/
 detailsproduct.onreadystatechange = function() {
     if(this.readyState == 4) {
         var productData = JSON.parse(this.responseText);
-        console.log(productData);
+
         projectContainer.innerHTML = `<div class="project-wrapper">
         <div class="image-section">
             <img src="${productData.preview}" alt="" class="main-image">
@@ -84,12 +84,10 @@ detailsproduct.onreadystatechange = function() {
         }
         if(foundAtPos > -1) {
           productList[foundAtPos].count = productList[foundAtPos].count + 1;
-          console.log(productList[foundAtPos].count);
           window.localStorage.setItem('product-list', JSON.stringify(productList));
       } else {
           productData.count = 1;
           productList.push(productData);
-          console.log(productList);
           window.localStorage.setItem('product-list', JSON.stringify(productList));
       }
         var cardCount = 0;

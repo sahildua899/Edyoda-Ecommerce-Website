@@ -7,7 +7,6 @@ productList = productList === null || productList === '' ? [] : productList;
 productList = productList.length > 0 ? JSON.parse(productList) : [];
 
 function checkData(data) {
-    console.log(data);
     projectCheckout.innerHTML += `<div class="checkout-card">
     <div class="image-section">
         <img src="${data.preview}" alt="" class="product-checkout-image">
