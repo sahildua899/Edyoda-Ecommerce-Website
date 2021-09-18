@@ -145,7 +145,7 @@ footer {
     margin: 0;
 }
 
-@media (max-width:400px){
+@media (max-width:480px){
     .item {
         height: auto;
     }

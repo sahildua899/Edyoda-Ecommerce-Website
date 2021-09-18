@@ -4,18 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Final Project</title>
-    <link rel="stylesheet" href="./CSS/base.css">
+    <title>Thankyou page</title>
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/thankyou.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
-    <link rel="stylesheet" href="./CSS/homepage.css">
-
 </head>
 <body>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
     <!-- Header -->
     <section id="header">
         <div class="menu-container">
@@ -27,8 +22,8 @@
                     </a>
                 </div>
                 <div class="menus">
-                    <a class="menu-item" href="#clothing">Clothing</a>
-                    <a class="menu-item" href="#accessory">Accessories</a>
+                    <a class="menu-item" href="../index.html#clothing">Clothing</a>
+                    <a class="menu-item" href="../index.html#accessory">Accessories</a>
                 </div>
             </div>
             <!-- Middle Section -->
@@ -42,52 +37,23 @@
             <div id="right-menu">
                 <div id="cart-wrapper">
                     <p id="cart-count">0</p>
-                    <a href="./Html/checkout.html"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="./checkout.html"><i class="fas fa-shopping-cart"></i></a>
                 </div>
-                <img src="./images/avatar.jpg" />
+                <img src="../images/avatar.jpg" />
             </div>
         </div>
     </section>
 
-    
-    <!-- Sliders -->
-    <div class="contain">
-        <div id="owl-carousel" class="owl-carousel owl-theme">
-          <div class="item">
-            <img src="./images/slider 1.png" alt="Slider 1">
-          </div>
-          <div class="item">
-            <img src="./images/Slider 2.png" alt="Slider 2">
-          </div>
-          <div class="item">
-            <img src="./images/slider 3.png" alt="Slider 3">
-          </div>
-          <div class="item">
-            <img src="./images/Slider 4.png" alt="Slider 4">
-          </div>
-          
-        </div>
-      </div>
-
-      <!-- Products Section -->
-      <main id="main-container">
-        <div id="first-div">
-            <!-- Clothing Section -->
-            <div class="clothing-section" id="clothing">
-                <h1 class="clothing-heading">Clothing for Men and Women</h1>
-                <div id="clothing-grids">
-                </div>
-            </div>
-            <!-- Accessories Section -->
-            <div class="acessory-section" id="accessory">
-                <h1 class="clothing-heading">Accessories for Men and Women</h1>
-                <div id="acessory-grids">
-                </div>
-            </div>
+    <!-- body Section -->
+    <main>
+        <div class="success-section">
+            <img src="../images/thank_you_PNG99.png" alt="" class="thankyou-image">
+            <h3 class="thankyou-heading-1">Order Placed Successfully!!</h3>
+            <p class="thankyou-heading-2">We have sent you an email with the order details..</p>
         </div>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-section">
@@ -121,16 +87,13 @@
                 <a href="/" class="footer-link">LA - 902722</a>
                 <a href="/" class="footer-link">UNITED STATES</a>
             </div>
-
         </div>
         <div class="copyright-section">
             <p class="copyright">© Copyright 2021. Designed By Sahil Dua</p>
         </div>
     </footer>
+
     <!-- Script -->
-    <script src="./Javascript/base.js"></script>
-    <script src="./Javascript/homepage.js"></script>
-    <script src="./Javascript/details.js"></script>
-    
+    <script src="../Javascript/base.js"></script>
 </body>
 </html>

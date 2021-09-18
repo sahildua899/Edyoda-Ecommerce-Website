@@ -68,15 +68,36 @@ detailsproduct.onreadystatechange = function() {
               topImage.src = mainImages[i].src;
         });
       }
-      let cardCount = cartCount.innerHTML;
       const addToCart = document.querySelector('.cart-button');
-      
+      var productList = window.localStorage.getItem('product-list');
+       productList = productList === null || productList === '' ? [] : productList;
+      productList = productList.length > 0 ? JSON.parse(productList) : [];
+
       addToCart.addEventListener('click', function(){
-          cardCount++
-          cartCount.innerHTML = cardCount;
-          window.localStorage.setItem('Cart', JSON.stringify(cartCount.innerHTML));
+        
+
+        var foundAtPos = -1;
+        for(var i=0; i < productList.length; i++) {
+            if(parseInt(productList[i].id) == parseInt(productData.id)) {
+                foundAtPos = i;
+            }
+        }
+        if(foundAtPos > -1) {
+          productList[foundAtPos].count = productList[foundAtPos].count + 1;
+          console.log(productList[foundAtPos].count);
+          window.localStorage.setItem('product-list', JSON.stringify(productList));
+      } else {
+          productData.count = 1;
+          productList.push(productData);
+          console.log(productList);
+          window.localStorage.setItem('product-list', JSON.stringify(productList));
+      }
+        var cardCount = 0;
+        for(var i=0; i<productList.length; i++) {
+            cardCount = cardCount + productList[i].count;
+        }
+        cartCount.innerHTML = cardCount;
       })
-      
     }
 }
 
