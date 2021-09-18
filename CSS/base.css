@@ -159,6 +159,13 @@ footer {
     .middle-section{
         display: none;
     }
+    .left-section {
+        width: 20%;
+        text-align: left;
+    }
+    .logo img {
+        width: 170px;
+    }
     .menu-container {
         justify-content: space-between;
     }
