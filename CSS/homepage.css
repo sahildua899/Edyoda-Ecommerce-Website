@@ -96,7 +96,10 @@
     .clothing-cards {
         width: calc(50% - 20px);
     }
-    
+    .item{
+        height: fit-content;
+        margin-top: 18%;
+    }
     #main-container {
         width: 100%;
     }
